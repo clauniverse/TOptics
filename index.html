@@ -1,66 +1,276 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tortoiseshell Optics</title>
-    <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
-  </head>
-  <body>
-    <header>
-      <nav class="container">
-        <div class="logo">
-          <img src="./resources/images/logo-white.png" alt="Logo">
-          <span>Tortoiseshell Optics</span>
-        </div>
-        <div class="menu">
-          <a href="#">Services</a>
-          <a href="#">Products</a>
-          <a href="#">Contact</a>
-        </div>
-        <div class="mobile">
-          <a href="#">Menu</a>
-        </div>
-      </nav>
-      <div class="banner">
-        <span>DON'T JUST LOOK, SEE.</span>
-      </div>
-    </header>
-    <section class="middle-content">
-        <div class="features">
-          <img src="./resources/images/paper-icon.png" alt="paper icon">
-          <span>Comprehensive Exams</span>
-        </div>
-        <div class="features">
-          <img src="./resources/images/ruler-icon.png" alt="ruler icon">
-          <span>Custom Fittings</span>
-        </div>
-        <div class="features">
-          <img src="./resources/images/truck-icon.png" alt="truck icon">
-          <span>Fast Delivery</span>
-        </div>
-    </section>
-    <section class="middle-content container">
-        <div class="information">
-          <span class="title">PHILOSOPHY</span>
-          <p>
-            Over 75% of our brains are dedicated to one sense: vision. We
-        believe everyone deserves to see the world, no matter what. That's why
-        we offer eye exams, custom fittings, and quick delievery at a low cost.
-        It's your vision that makes ours.
-          </p>
-        </div>
-        <div class="information">
-          <span class="title">APPOINTMENTS</span>
-          <p>
-            Schedule an appointment by calling us at (312) 654-0987.
-        We're open Tuesday - Saturday, 9AM - 6PM.
-          </p>
-        </div>
-    </section>
-    <footer class="container">
-      <img src="./resources/images/logo-black.png" alt="Logo dark">
-      <span>Copyright Tortoiseshell Optics</span>
-    </footer>
-  </body>
-</html>
+html {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+body {
+  width: 100%;
+  font-family: Helvetica;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+header {
+  background-image: url('../images/glasses-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+}
+
+nav {
+  background-color: cadetblue;
+  display: flex;
+  position: relative;
+  top: 1rem;
+  padding: 1rem 0;
+  justify-content: space-around;
+}
+
+.logo img {
+  height: 1.5rem;
+  width: auto;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.logo span {
+  color: white;
+  font-size: 1rem;
+}
+
+.menu {
+  padding: 0.6rem 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.mobile {
+  display: none;
+}
+
+.banner {
+  background-color: white;
+  margin-top: 10rem;
+  float: right;
+  padding: 1.5rem 5rem;
+  margin-right: 2rem;
+}
+
+.banner span {
+  margin: 0.67em 0;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.middle-content {
+  display: flex;
+  justify-content: center;
+}
+
+.features {
+  margin: 3rem;
+  width: 5rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  line-height: 1.2;
+
+}
+
+.features img {
+  width: 3.5rem;
+}
+
+.information {
+  margin-right: 5%;
+  width: 35%;
+  margin-bottom: 4rem;
+}
+
+.title {
+  background-color: cadetblue;
+  padding: 0.5rem 1.25rem;
+  font-weight: bold;
+  color: white;
+  max-width: 100%;
+}
+
+.information p {
+  padding: 1rem 0;
+  margin-top: 1rem;
+  line-height: 1.4rem;
+}
+
+footer {
+  background-color: azure;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+    height: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+
+@media only screen and (max-width: 960px){
+
+  .container {
+    width: 100%;
+  }
+
+  header {
+    height: 22rem;
+  }
+
+  nav {
+    top: auto;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .banner {
+    padding: 0.75rem 4rem;
+    margin-right: 2rem;
+    margin-top: 5rem;
+  }
+
+  .banner span {
+    font-size: 1.33rem;
+
+  }
+}
+
+@media only screen and (max-width: 580px){
+  .logo span {
+    display: none;
+}
+}
+
+@media only screen and (min-width: 580px){
+  .logo span {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 480px){
+  .container {
+    width: 100%;
+  }
+
+  header {
+    height: 17rem;
+  }
+
+  nav {
+    top: auto;
+  }
+
+  .banner {
+    padding: 0.75rem 4rem;
+    margin-right: 2rem;
+  }
+
+  .banner span {
+    font-size: 1.33rem;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .mobile a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo span {
+    display: none;
+  }
+
+  .banner {
+    padding: 1rem auto;
+    margin: 9rem auto;
+    float: none;
+  }
+
+  .banner span {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .features {
+    margin: 3.77rem;
+  }
+
+  .middle-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 3rem;
+  }
+
+  .features {
+    margin: 1.54rem auto 3.77rem auto;
+    width: 5rem;
+    height: 8rem;
+    line-height: 1.2;
+
+  }
+
+.title {
+  max-width: auto;
+  marging: 0;
+  text-align: center;
+}
+
+.information {
+  font-size: 0.77rem;
+  width: auto;
+  margin-right: auto;
+
+}
+
+.information p {
+  padding: 1rem 0.77rem;
+}
+
+  footer {
+    background-color: azure;
+    padding: 4rem 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  footer img {
+      margin: 0 auto
+  }
+
+  footer span {
+    display: none;
+  }
+}
