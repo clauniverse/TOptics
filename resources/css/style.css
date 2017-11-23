@@ -61,7 +61,7 @@ nav {
   margin-top: 10rem;
   float: right;
   padding: 1.5rem 5rem;
-  margin-right: -2rem;
+  margin-right: 2rem;
 }
 
 .banner span {
@@ -104,7 +104,7 @@ nav {
   padding: 0.5rem 1.25rem;
   font-weight: bold;
   color: white;
-  max-width: 10rem;
+  max-width: 100%;
 }
 
 .information p {
@@ -158,8 +158,12 @@ footer img {
 
 @media only screen and (max-width: 580px){
   .logo span {
-    color: white;
-    font-size: 1rem;
+    display: none;
+}
+}
+
+@media only screen and (min-width: 580px){
+  .logo span {
     display: none;
 }
 }
@@ -230,14 +234,30 @@ footer img {
     margin-top: 3rem;
   }
 
-  .features,
-  .information {
+  .features {
     margin: 1.54rem auto 3.77rem auto;
     width: 5rem;
     height: 8rem;
     line-height: 1.2;
 
   }
+
+.title {
+  max-width: auto;
+  marging: 0;
+  text-align: center;
+}
+
+.information {
+  font-size: 0.77rem;
+  width: auto;
+  margin-right: auto;
+
+}
+
+.information p {
+  padding: 1rem 0.77rem;
+}
 
   footer {
     background-color: azure;
